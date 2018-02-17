@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<head>
+<style>
+#dummy {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: red;
+}
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4% 0 0 -8%;
+    cursor:pointer;
+    border: white solid 1px;
+}
+#subText 
+{
+    position: absolute;
+    top: 64%;
+    left: 37%;
+    margin: -4% 0 0 -8%;
+    cursor:pointer;
+    color:white;
+}
+#child_1 {
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    margin: -4% 0 0 -8%;
+    cursor:pointer;
+    display:none;
+}
+#child_2 {
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    margin: -4% 0 0 -8%;
+    cursor:pointer;
+    display:none;
+}
+#child_3 {
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left:50%;
+    margin: -2% 0 0 -8%;
+    cursor:pointer;
+    display:none;
+}
+#child_4 {
+    position: absolute;
+    text-align: center;
+    top:50%;
+    left: 50%;
+    margin: -2% 0 0 -8%;
+    cursor:pointer;
+    display:none;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="dummy">
+    <div id="text"> Square </div>
+    <div id="subText"> Click On The Square </div>
+    <div id="child_1"> Circle </div>
+    <div id="child_2"> Rectangle </div>
+    <div id="child_3"> Rhombas </div>
+    <div id="child_4"> Pyramid </div>
+</div>
+<script>
+    var textCopy = document.getElementById("text");
+    //click function
+   /* textCopy.addEventListener("click", function() {
+        console.log("click");
+
+    })*/
+    $(document).ready(function(){
+    $("#text").click(function(){
+        $("#subText").hide();
+        $("#child_1").css({"display":"block","color":"white"});
+        $("#child_2").css({"display":"block","color":"white"});
+        $("#child_3").css({"display":"block","color":"white"});
+        $("#child_4").css({"display":"block","color":"white"});
+        $("#child_1").animate({
+            top:"25px",
+            opacity:"1",
+            width:"300px"
+        });
+        $("#child_2").animate({
+            top:"25px",
+            left:"30px",
+            opacity:"1"
+        });
+        $("#child_3").animate({
+            top:"176px",
+            opacity:"1",
+            left:"215px",
+            width: "150px"
+        });
+        $("#child_4").animate({
+            top:"176px",
+            opacity:"1",
+            left:"-16px",
+            width: "150px"
+        });
+        
+    });
+});
+
+    
+</script>
+</body>
+</html>
