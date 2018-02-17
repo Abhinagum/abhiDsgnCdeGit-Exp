@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task Two</title>
+</head>
+<style type="text/css">
+	.daysForm{  
+    padding:10px;  
+    border:1px solid pink;  
+    border-radius:10px;  
+    float:left;  
+    margin-top:10px;  
+	}  
+	.formHeading{  
+    background-color:green;  
+    color:white;  
+    padding:4px;  
+    text-align:center;  
+	} 
+</style>
+<script type="text/javascript">
+	function alertChecked() {
+		var date = document.getElementById("number").value,
+			days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+			d = new Date(date),
+			dayName = days[d.getDay()];
+		alert(dayName);
+	}
+</script>
+<body>
+	<div class="daysForm">  
+		<h3 class="formHeading">Convering Date to Week Day</h3>
+			<form>  
+				Enter Date :<input type="date" id="number" name="number"/><br/>  
+				<input type="button" value="Submit" onclick="alertChecked()"/>
+			</form>
+	</div>
+</body>
+</html>
